@@ -1,0 +1,117 @@
+<!doctype html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta property="og:locale" content="es_LA" />
+    <title>Conversion entre bases 2, 8, 10, 16 de numeros</title>
+    <script src="https://vuejs.org/js/vue.min.js"></script>
+	<link href="estilo.css" rel="stylesheet" type="text/css">
+</head>
+
+<body>
+    <div class="section">
+        <div id="app" class="container is-fluid">
+            <div class="columns">
+                <div class="column">
+                    <h1>Conversion entre bases </h1>
+					<h1>2, 8, 10, 16 de numeros</h1>
+                    
+
+                    
+                    <div class="field">
+                        <div class="control">
+                            <input v-model="numero" autofocus class="input" type="text" placeholder="Ingrese el numero que desea convertir">
+                        </div>
+                    </div>
+					
+                    <div class="field">
+                        <div class="control">
+						<br>
+                            <p>Seleccione la base a convertir el numero</p>
+							
+							<b>
+							
+                            <label class="radio">
+                                <input v-model="baseSeleccionada" value="2" type="radio" name="tipoConversion">
+                                Binario
+                            </label>
+							
+                            <label class="radio">
+                                <input v-model="baseSeleccionada" value="8" type="radio" name="tipoConversion">
+                                Octal
+                            </label>
+							
+                            <label class="radio">
+                                <input v-model="baseSeleccionada" value="10" type="radio" name="tipoConversion">
+                                Decimal
+                            </label>
+							
+                            <label class="radio">
+                                <input v-model="baseSeleccionada" value="16" type="radio" name="tipoConversion">
+                                Hexadecimal
+                            </label>
+							</b>
+							<br>
+							<br>
+                        </div>
+                    </div>
+                    <div class="field has-addons">
+                        <div class="control">
+                            <label>
+                                BINARIO:
+                            </label>
+                        </div>
+                        <div class="control is-expanded">
+                            <input v-model="binario" readonly class="input" type="text" placeholder="" id="bi">
+                        </div>
+                       
+                    </div>
+                    <div class="field has-addons">
+
+                        <div class="control">
+                            <label>
+                                OCTAL:
+                            </label>
+                        </div>
+                        <div class="control is-expanded">
+                            <input id="oc" v-model="octal" readonly class="input" type="text" placeholder="">
+                        </div>
+                       
+                    </div>
+					
+                    <div class="field has-addons">
+
+                        <div class="control">
+                            <label>
+                                DECIMAL
+                            </label>
+                        </div>
+                        <div class="control is-expanded">
+                            <input id="de" v-model="decimal" readonly class="input" type="text" placeholder="">
+                        </div>
+                        
+                    </div>
+                    <div class="field has-addons">
+
+                        <div class="control">
+                            <label>
+                                HEXADECIMAL
+                            </label>
+                        </div>
+                        <div class="control is-expanded">
+                            <input id="he" v-model="hexadecimal" readonly class="input" type="text" placeholder="">
+                        </div>
+                        
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+</body>
+<script src="metodos.js"></script>
+
+</html>
